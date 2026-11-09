@@ -1,0 +1,24 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "dualitykyle@pm.me",
+        "Name": "Kyle McGrath"
+      }
+    ],
+    "Category": "Windows and Tasks",
+    "Description": "A virtual desktop pager: minimal, but highly customisable to fit any setup",
+    "EnabledByDefault": true,
+    "Icon": "preferences-desktop-virtual",
+    "Id": "com.github.dualitykyle.advancedindicator",
+    "License": "GPL-3.0-or-later",
+    "Name": "Advanced Desktop Indicator",
+    "Version": "1.0.0",
+    "Website": "https://github.com/DualityKyle/advanced-desktop-indicator"
+  },
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "X-Plasma-Provides": [
+    "org.kde.plasma.virtualdesktops"
+  ]
+}

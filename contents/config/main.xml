@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name="" />
+  <group name="General">
+    <!-- Click actions: none|next|prev|goto|overview|desktop -->
+    <entry name="leftClickAction" type="String">
+      <default>next</default>
+    </entry>
+    <entry name="middleClickAction" type="String">
+      <default>none</default>
+    </entry>
+    <entry name="rightClickAction" type="String">
+      <default>none</default>
+    </entry>
+
+    <entry name="scrollEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="scrollInverted" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="scrollHorizontal" type="Bool">
+      <default>true</default>
+    </entry>
+
+    <entry name="navigationWrap" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showTooltip" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="animationsEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="hideOnSingleDesktop" type="Bool">
+      <default>false</default>
+    </entry>
+  </group>
+
+  <group name="Layout">
+    <entry name="singleRow" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- none|edge|90|180|270 -->
+    <entry name="indicatorRotation" type="String">
+      <default>none</default>
+    </entry>
+
+    <!-- shared|thisScreen|allScreens -->
+    <entry name="screenMode" type="String">
+      <default>shared</default>
+    </entry>
+    <!-- allScreens layout: row|stacked -->
+    <entry name="screenLayout" type="String">
+      <default>row</default>
+    </entry>
+  </group>
+
+  <group name="Appearance">
+    <!-- minimal|labels|icons -->
+    <entry name="indicatorType" type="String">
+      <default>minimal</default>
+    </entry>
+    <entry name="markOccupied" type="Bool">
+      <default>true</default>
+    </entry>
+  </group>
+
+  <group name="Minimal">
+    <!-- minimal style types: dots|pills|custom -->
+    <entry name="minimalStyle" type="String">
+      <default>dots</default>
+    </entry>
+    <entry name="minimalInactiveOutline" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="minimalPillLength" type="Double">
+      <default>2.0</default>
+    </entry>
+
+    <entry name="minimalScaleWithPanel" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="minimalPanelScale" type="Double">
+      <default>0.4</default>
+    </entry>
+    <entry name="minimalFixedSize" type="Int">
+      <default>12</default>
+    </entry>
+    <entry name="minimalSpacing" type="Int">
+      <default>2</default>
+    </entry>
+    <entry name="minimalOpacityInactive" type="Int">
+      <default>50</default>
+    </entry>
+
+    <entry name="minimalCharPerScreen" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- All-screens view: [active, inactive] per later screen, as JSON -->
+    <entry name="minimalCharsPerScreen" type="String">
+      <default>[]</default>
+    </entry>
+    <entry name="minimalCharActive" type="String">
+      <default>●</default>
+    </entry>
+    <entry name="minimalCharInactive" type="String">
+      <default>○</default>
+    </entry>
+
+    <!-- colour modes: plain|theme|custom -->
+    <entry name="minimalColorMode" type="String">
+      <default>theme</default>
+    </entry>
+    <entry name="minimalColorActive" type="Color">
+      <default>#ffffff</default>
+    </entry>
+    <entry name="minimalColorInactive" type="Color">
+      <default>#ffffff</default>
+    </entry>
+    <entry name="minimalColorOccupied" type="Color">
+      <default>#3daee9</default>
+    </entry>
+  </group>
+
+  <group name="Labels">
+    <!-- label style types: number|name|template|list -->
+    <entry name="labelStyle" type="String">
+      <default>template</default>
+    </entry>
+    <entry name="labelTemplate" type="String">
+      <default>D%n</default>
+    </entry>
+    <!-- All-screens view: template per later screen, as JSON -->
+    <entry name="labelTemplatePerScreen" type="String">
+      <default>[]</default>
+    </entry>
+    <entry name="labelList" type="StringList">
+    </entry>
+    <entry name="labelListPerScreen" type="String">
+      <default>[]</default>
+    </entry>
+
+    <entry name="labelScaleWithPanel" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="labelPanelScale" type="Double">
+      <default>0.35</default>
+    </entry>
+    <entry name="labelFixedSize" type="Int">
+      <default>12</default>
+    </entry>
+    <entry name="labelBoldActive" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="labelItalicActive" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="labelBoldInactive" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="labelItalicInactive" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="labelActiveAsterisk" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="labelOpacityInactive" type="Int">
+      <default>50</default>
+    </entry>
+
+    <entry name="labelAutoWidth" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="labelFixedWidth" type="Int">
+      <default>40</default>
+    </entry>
+    <entry name="labelPadding" type="Int">
+      <default>8</default>
+    </entry>
+    <entry name="labelWrap" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- Never make a label shorter along the panel than the panel is thick -->
+    <entry name="labelMinWidthPanelHeight" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="labelSpacing" type="Int">
+      <default>2</default>
+    </entry>
+
+    <!-- highlight types: line|full|fullLine|boxes|none -->
+    <entry name="labelHighlight" type="String">
+      <default>fullLine</default>
+    </entry>
+    <entry name="labelBoxBorder" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="labelBoxBorderWidth" type="Int">
+      <default>1</default>
+    </entry>
+    <!-- Pixels between label and box border -->
+    <entry name="labelBoxPadding" type="Int">
+      <default>5</default>
+    </entry>
+    <!-- Percentage of the box height; 50 = pill ends -->
+    <entry name="labelBoxRadius" type="Int">
+      <default>25</default>
+    </entry>
+
+    <!-- colour modes: theme|custom -->
+    <entry name="labelColorMode" type="String">
+      <default>theme</default>
+    </entry>
+    <entry name="labelColorActive" type="Color">
+      <default>#ffffff</default>
+    </entry>
+    <entry name="labelColorInactive" type="Color">
+      <default>#ffffff</default>
+    </entry>
+    <entry name="labelColorHighlight" type="Color">
+      <default>#3daee9</default>
+    </entry>
+    <entry name="labelColorOccupied" type="Color">
+      <default>#3daee9</default>
+    </entry>
+    <entry name="labelColorBorder" type="Color">
+      <default>#ffffff</default>
+    </entry>
+    <entry name="labelOccupiedMatchHighlight" type="Bool">
+      <default>false</default>
+    </entry>
+  </group>
+
+  <group name="Icons">
+    <!-- icon styles: original|greyInactive|greyscale|customFlat|customTinted -->
+    <entry name="iconStyle" type="String">
+      <default>original</default>
+    </entry>
+    <!-- Only used by the custom colour styles -->
+    <entry name="iconTintActive" type="Color">
+      <default>#ffffff</default>
+    </entry>
+    <entry name="iconTintInactive" type="Color">
+      <default>#ffffff</default>
+    </entry>
+    <entry name="iconOpacityInactive" type="Int">
+      <default>65</default>
+    </entry>
+    <entry name="iconPerScreen" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- Icon name or path per desktop; empty entries use the default icon -->
+    <entry name="iconNames" type="StringList">
+      <default>internet-web-browser-symbolic,format-text-code-symbolic,music-note-16th-symbolic,folder-videos-symbolic</default>
+    </entry>
+    <entry name="iconNamesPerScreen" type="String">
+      <default>[]</default>
+    </entry>
+
+    <entry name="iconScaleWithPanel" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="iconPanelScale" type="Double">
+      <default>0.6</default>
+    </entry>
+    <entry name="iconFixedSize" type="Int">
+      <default>24</default>
+    </entry>
+
+    <entry name="iconAutoWidth" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="iconFixedWidth" type="Int">
+      <default>40</default>
+    </entry>
+    <!-- Room on each end of the icon, with fit to icon -->
+    <entry name="iconPadding" type="Int">
+      <default>8</default>
+    </entry>
+    <entry name="iconMinWidthPanelHeight" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="iconSpacing" type="Int">
+      <default>2</default>
+    </entry>
+
+    <!-- highlight types: line|full|fullLine|boxes|none -->
+    <entry name="iconHighlight" type="String">
+      <default>fullLine</default>
+    </entry>
+    <entry name="iconBoxBorder" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="iconBoxBorderWidth" type="Int">
+      <default>1</default>
+    </entry>
+    <entry name="iconBoxPadding" type="Int">
+      <default>5</default>
+    </entry>
+    <!-- Percentage of the box height; 50 = pill ends -->
+    <entry name="iconBoxRadius" type="Int">
+      <default>25</default>
+    </entry>
+
+    <!-- colour modes: theme|custom -->
+    <entry name="iconColorMode" type="String">
+      <default>theme</default>
+    </entry>
+    <entry name="iconColorHighlight" type="Color">
+      <default>#3daee9</default>
+    </entry>
+    <entry name="iconColorOccupied" type="Color">
+      <default>#3daee9</default>
+    </entry>
+    <entry name="iconColorBorder" type="Color">
+      <default>#ffffff</default>
+    </entry>
+    <entry name="iconOccupiedMatchHighlight" type="Bool">
+      <default>false</default>
+    </entry>
+  </group>
+</kcfg>
